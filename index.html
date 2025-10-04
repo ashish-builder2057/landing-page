@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Ranjan | Gamer</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        body {
+            /* Minecraft background */
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        /* Optional overlay to make text readable */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5); /* dark overlay */
+            z-index: 1;
+        }
+
+        .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.7);
+    animation: fadeIn 2s ease-in-out, glow 2s infinite alternate;
+}
+
+/* Glow animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px #00ffe7, 0 0 30px #00ffe7, 0 0 40px #00ffe7;
+    }
+    50% {
+        box-shadow: 0 0 30px #00ffe7, 0 0 40px #ff3c38, 0 0 50px #00ffe7;
+    }
+    100% {
+        box-shadow: 0 0 20px #ff3c38, 0 0 30px #00ffe7, 0 0 40px #ff3c38;
+    }
+}
+
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #00ffe7;
+            animation: textGlow 1.5s infinite alternate;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ff3c38;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: 2px solid #00ffe7;
+            border-radius: 10px;
+            background: transparent;
+            color: #00ffe7;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #00ffe7;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.8);}
+            to {opacity: 1; transform: scale(1);}
+        }
+
+        @keyframes textGlow {
+            from {text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;}
+            to {text-shadow: 0 0 20px #00ffe7, 0 0 40px #00ffe7;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="name">Ashish Ranjan 😎</h1>
+        <h2 id="role">Gamer</h2>
+        <p id="age">Age: 12</p>
+        <p id="class">Class: 5</p>
+        <button class="btn" onclick="greet()">Say Hi 👋</button>
+        <p id="clickCount">Hi clicked: 0 times</p> 
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
